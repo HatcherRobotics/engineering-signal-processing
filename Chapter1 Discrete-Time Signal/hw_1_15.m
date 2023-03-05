@@ -1,3 +1,4 @@
+%运行前提前导入数据
 %1
 figure(1)
 plot(sunspot(1:100,1),sunspot(1:100,2));
