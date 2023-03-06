@@ -1,6 +1,6 @@
-%运行前提前导入数据
 %1
-figure(1)
+[sunspot,txt,raw]=xlsread("/sunspot.xlsx");
+subplot(2,2,1)
 plot(sunspot(1:100,1),sunspot(1:100,2));
 xlabel("year")
 ylabel("number of sunspots")
@@ -10,9 +10,9 @@ grid on;
 M = 32;
 r_sunspot = xcorr(sunspot(1:100,2),M,'biased');
 m = 1:(2*M+1);
-figure(2)
+subplot(2,2,2)
 plot(m,r_sunspot);
-xlabel("m")
+xlabel("year")
 ylabel("self correlation of sunspot")
 grid on;
 
@@ -21,9 +21,13 @@ x_n = sunspot(1:100,2);
 a = sum(sunspot);
 mu = a(1,2)/100;
 x = x_n-mu;
+subplot(2,2,3)
+plot(sunspot(1:100,1),x);
+xlabel("year")
+ylabel("number of sunspots-mean")
 r_x = xcorr(x,M,'biased');
-figure(3)
+subplot(2,2,4)
 plot(m,r_x);
-xlabel("m");
+xlabel("year");
 ylabel("self correlation of x-mu")
 grid on;

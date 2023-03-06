@@ -15,11 +15,13 @@ grid on;
 Mflag = 60;
 ru = xcorr(u,Mflag,'biased');
 m = 1:2*Mflag+1;%2N+1
+u_m = -Mflag:Mflag;
 subplot(2,2,2)
-plot(m,ru);
-xlabel('m=1:2*Mflag+1');
+plot(u_m,ru);
+xlabel('m');
 ylabel('self correlation of u');
 grid on;
+
 %2
 omega = pi/16;
 n = 1:N;
@@ -35,7 +37,7 @@ grid on;
 
 rx = xcorr(x,Mflag,'biased');
 subplot(2,2,4)
-plot(m,rx);
+plot(u_m,rx);
 xlabel('m');
 ylabel('self correlation of x');
 grid on;
