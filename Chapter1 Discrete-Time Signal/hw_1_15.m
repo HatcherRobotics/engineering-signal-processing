@@ -1,7 +1,7 @@
 %1
 [sunspot,txt,raw]=xlsread("/sunspot.xlsx");
 subplot(2,2,1)
-plot(sunspot(1:100,1),sunspot(1:100,2));
+stem(sunspot(1:100,1),sunspot(1:100,2));
 xlabel("year")
 ylabel("number of sunspots")
 grid on;
@@ -22,7 +22,7 @@ a = sum(sunspot);
 mu = a(1,2)/100;
 x = x_n-mu;
 subplot(2,2,3)
-plot(sunspot(1:100,1),x);
+stem(sunspot(1:100,1),x);
 xlabel("year")
 ylabel("number of sunspots-mean")
 r_x = xcorr(x,M,'biased');
