@@ -7,4 +7,4 @@ end
 n2 = 0:2;
 h = 1./(2.^n2);
 y = fftfilt(h,x);
-stem(y)
+stem(y,'.')

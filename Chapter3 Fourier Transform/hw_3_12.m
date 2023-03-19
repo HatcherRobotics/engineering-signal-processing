@@ -13,7 +13,7 @@ for k=1:60
       end 
 end
 k=-29:30;   
-figure(1)
+subplot(311)
 stem(k,x,'.');
 hold
 plot(k,zeros(size(x)));
@@ -31,7 +31,7 @@ for k=1:60
       end 
 end
 k=-29:30; 
-figure(2)
+subplot(312)
 stem(k,x,'.')
 hold
 plot(k,zeros(size(x)))
@@ -49,7 +49,7 @@ for k=1:60
       end 
 end
 k=-29:30; 
-figure(3)
+subplot(313)
 stem(k,x,'.')
 hold
 plot(k,zeros(size(x)))
