@@ -1,3 +1,4 @@
+clear all;
 %1.1
 b1 = [0,0.5,-0.5];
 a1 = [1,-(2^(0.5))-0.9,1+0.9*(2^(0.5)),-0.9];
@@ -5,7 +6,7 @@ a1 = [1,-(2^(0.5))-0.9,1+0.9*(2^(0.5)),-0.9];
 [H,w] = freqz(b1,a1,256,'whole',1);
 Hr = abs(H);%amplitude
 Hphase = angle(H);%phase
-%Hphase = unwrap(Hphase);
+Hphase = unwrap(Hphase);
 figure(1)
 subplot(221)
 plot(w,Hr);
@@ -34,7 +35,7 @@ a2 = [1,-2^0.5-0.9,1+0.9*2^0.5,-0.9];
 [H,w] = freqz(b2,a2,256,'whole',1);
 Hr2 = abs(H);%amplitude
 Hphase = angle(H);%phase
-%Hphase = unwrap(Hphase);
+Hphase = unwrap(Hphase);
 figure(2)
 subplot(221)
 plot(w,Hr2);

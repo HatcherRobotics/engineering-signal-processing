@@ -1,4 +1,4 @@
-clear;
+clear all;
 f0 = 50;
 N =16;
 n = 0:N-1;

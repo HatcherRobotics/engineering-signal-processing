@@ -1,4 +1,4 @@
-clear;
+clear all;
 
 T=1;tao1=0.2*T;A=5;
 s=pi*tao1/T;
