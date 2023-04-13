@@ -3,7 +3,7 @@ fs = 40;N =64;
 n = 0:N-1;
 x = sin(2*pi*f1*n/fs)+sin(2*pi*f2*n/fs)+sin(2*pi*f3*n/fs);
 X = fft(x);
-f = fs/N*(0:N/2-1);
+f = fs/N*(1:N/2);
 subplot(231)
 plot(n,x);
 subplot(232)

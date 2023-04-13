@@ -9,6 +9,6 @@ s = A*sin(w*f0*n)+u;
 subplot(211)
 plot(n,s);
 S = fft(s);
-f = fs/N*(0:N/2-1);
+f = fs/N*(1:N/2);
 subplot(212)
 plot(f,abs(S(1:N/2)));
