@@ -4,8 +4,8 @@ u = randn(1,N);
 n = 0:N-1;
 fs = 1.5;
 A =5;f0 = 0.3;
-w = 2*pi/fs;
-s = A*sin(w*f0*n)+u;
+w = 2*pi*f0;
+s = A*sin(w/fs*n)+u;
 subplot(211)
 plot(n,s);
 S = fft(s);
